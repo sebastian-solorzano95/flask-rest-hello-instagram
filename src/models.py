@@ -3,6 +3,8 @@ from sqlalchemy import String, DateTime, ForeignKey, Text
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from datetime import datetime
 from typing import List
+from flask_migrate import Migrate
+
 
 db = SQLAlchemy()
 
@@ -90,3 +92,4 @@ class Follower(db.Model):
             "follower_id": self.follower_id,
             "following_id": self.following_id
         }
+    
